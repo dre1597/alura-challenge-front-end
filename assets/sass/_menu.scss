@@ -1,0 +1,41 @@
+.menu {
+    display: none;
+    padding: 1rem 0;
+    @include for-laptop {
+        display: block;
+        width: 20%;
+        margin: 0;
+    }
+    &__item {
+        text-decoration: none;
+        color: $title-color;
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+        @include transition-ease;
+        &:hover .btn-code,
+        &:hover .btn-users {
+            background: rgba(80, 129, 251, 0.64);
+        }
+    }
+}
+
+.btn-code,
+.btn-users {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: rgba(80, 129, 251, 0.16);
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    @include transition-ease;
+    & i {
+        width: 20px;
+    }
+    &:focus {
+        background-color: $blue;
+    }
+}

@@ -1,0 +1,38 @@
+$dark-blue: #051d3b;
+$blue: #5081fb;
+$light-blue: #7ba4fc;
+$lighter-blue: #96b9fd;
+$white: #fff;
+$dark-grey: #141414;
+$field-color: rgba(255, 255, 255, 0.16);
+$field-color-hover: rgba(255, 255, 255, 0.24);
+$title-color: rgba(255, 255, 255, 0.7);
+
+$fsz-titles: 21px;
+$fsz-body: 16px;
+$fsz-aside: 12px;
+
+$ff-default: 'Inter', sans-serif;
+$ff-code: 'Roboto Mono', monospace;
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin for-tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-laptop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}

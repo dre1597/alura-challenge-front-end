@@ -1,0 +1,42 @@
+@import 'variables', 'header', 'menu', 'code-editor', 'customize';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark-blue;
+    font-family: $ff-default;
+}
+
+.main {
+    @include for-laptop {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.title {
+    font-size: $fsz-aside;
+    color: $title-color;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.active {
+    & div {
+        background-color: $blue;
+    }
+    & p {
+        color: $white;
+    }
+}

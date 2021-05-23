@@ -1,0 +1,110 @@
+.customize {
+    width: 90%;
+    margin: 0 auto;
+    @include for-laptop {
+        width: 20%;
+        margin: 0;
+    }
+    &__fieldset-details,
+    &__fieldset-customize {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        border: none;
+    }
+    &__fieldset-details {
+        height: 180px;
+    }
+    &__fieldset-customize {
+        height: 120px;
+        @include for-tablet {
+            height: 70px;
+            flex-direction: row;
+        }
+        @include for-laptop {
+            height: 120px;
+            flex-direction: column;
+        }
+    }
+    &__project-name,
+    &__description,
+    &__languages {
+        padding: 1rem;
+        background-color: $field-color;
+        color: $white;
+        border-radius: 8px;
+        border: transparent;
+        margin-bottom: 15px;
+        font-size: 16px;
+        width: 100%;
+        height: 56px;
+        margin: 0 auto;
+        @include transition-ease;
+        &:hover {
+            background-color: $field-color-hover;
+        }
+    }
+    &__description {
+        height: auto;
+    }
+    &__languages {
+        @include for-tablet {
+            margin: 0;
+            width: 49%;
+        }
+        @include for-laptop {
+            margin: 0 auto;
+            width: 100%;
+        }
+        @include transition-ease;
+        &:hover {
+            background-color: $field-color-hover;
+        }
+        & option {
+            background-color: #2d415b;
+        }
+    }
+    &__color {
+        background-color: transparent;
+        width: 100%;
+        height: 56px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 auto;
+        border: transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        @include for-tablet {
+            margin: 0;
+            width: 49%;
+        }
+        @include for-laptop {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+[type='color'] {
+    padding: 0;
+    border: transparent;
+    border-radius: 15px;
+}
+
+.customize-btn {
+    background-color: $blue;
+    border-radius: 8px;
+    height: 56px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: transparent;
+    font-size: 16px;
+    color: $dark-blue;
+    @include transition-ease;
+    &:hover {
+        background: $light-blue;
+    }
+}

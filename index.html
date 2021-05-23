@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo--container">
+            <img class="header__logo" src="./assets/img/Logo.svg" alt="">
+        </div>
+        <input class="search-bar" type="search" name="" id="" placeholder="Busque por algo">
+        <div class="header__buttons">
+            <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
+            <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
+            <button class="btn-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="header__profile">
+            <img class="header__profile--img" src="./assets/img/user.jpg" class="profile_img" alt=''>
+            <p class="header__profile--name">André</p>
+        </div>
+    </header>
+    <main class="main">
+        <aside class="menu">
+            <h3 class="title">menu</h3>
+            <a href="#" class="menu__item active">
+                <div class="btn-code">
+                    <i class="fas fa-code"></i>
+                </div>
+                <p class="menu__item--name">Editor de Código</p>
+            </a>
+            <a href="users.html" class="menu__item">
+                <div class="btn-users">
+                    <i class="fas fa-users"></i>
+                </div>
+                <p class="menu__item--name">Comunidade</p>
+            </a>
+        </aside>
+        <section class="code-editor">
+            <div class="code-editor__container">
+                <div class="code-editor__editor">
+                    <ul class="code-editor__mac-window">
+                        <li class="red-btn"></li>
+                        <li class="yellow-btn"></li>
+                        <li class="green-btn"></li>
+                    </ul>
+                    <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30"
+                        rows="10"></textarea>
+                </div>
+            </div>
+            <button class="highlight_btn" type="button">Visualizar com o highlight</button>
+        </section>
+        <section class="customize">
+            <h3 class="title">seu projeto</h3>
+            <fieldset class="customize__fieldset-details">
+                <input class="customize__project-name" type="text" placeholder="Nome do seu projeto">
+                <textarea class="customize__description" name="description" id="description" cols="30" rows="4"
+                    wrap="soft" placeholder="Descrição do seu projeto"></textarea>
+            </fieldset>
+            <h3 class="title">personalização</h3>
+            <fieldset class="customize__fieldset-customize">
+                <select class="customize__languages" name="" id="">
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+                <input class="customize__color" type="color" value="#6bd1ff">
+            </fieldset>
+            <button class="customize-btn" type="button">Salvar Projeto</button>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

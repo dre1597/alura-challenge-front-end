@@ -1,0 +1,92 @@
+.code-editor {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    height: 600px;
+    @include for-laptop {
+        width: 50%;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #6bd1ff;
+        width: 100%;
+        height: 80%;
+        border-radius: 8px;
+    }
+    &__editor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+    }
+    &__mac-window {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 8px 8px 0 0;
+        height: 20px;
+        width: 100%;
+        list-style: none;
+        background-color: #141414;
+    }
+    &__text {
+        width: 100%;
+        height: 100%;
+        border: none;
+        color: $white;
+        padding: 1rem;
+        font-family: $ff-code;
+        font-size: 14px;
+        background-color: #141414;
+        resize: none;
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+.red-btn {
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 5px;
+    background-color: #ff5f56;
+}
+.yellow-btn {
+    height: 12px;
+    width: 12px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 5px;
+    background-color: #ffbd2e;
+}
+.green-btn {
+    height: 12px;
+    width: 12px;
+    border: none;
+    border-radius: 50px;
+    background-color: #27c93f;
+}
+
+.highlight_btn {
+    font-family: $ff-default;
+    background-color: rgba(80, 129, 251, 0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    color: $white;
+    width: 100%;
+    margin: 30px auto;
+    border: none;
+    @include transition-ease;
+    &:hover {
+        background-color: rgba(80, 129, 251, 0.16);
+    }
+}

@@ -1,0 +1,89 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    &__logo {
+        width: 145px;
+        padding: 1rem 0;
+        &--container {
+            @include for-laptop {
+                width: 20%;
+                text-align: left;
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__profile {
+        display: none;
+        @include for-laptop {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 20%;
+            padding: 1rem;
+            &--img {
+                width: 32px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+            &--name {
+                color: $white;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.search-bar {
+    display: none;
+    @include for-tablet {
+        display: block;
+        padding: 1rem;
+        background-color: $field-color;
+        color: $white;
+        border-radius: 8px;
+        border: transparent;
+        font-size: 16px;
+        width: 450px;
+        height: 56px;
+        padding: 1rem;
+        margin: 0 auto;
+        @include transition-ease;
+        &:hover {
+            background-color: $field-color-hover;
+        }
+    }
+    @include for-laptop {
+        width: 50%;
+    }
+}
+
+.btn-search,
+.btn-toggle,
+.btn-close {
+    border: none;
+    background-color: transparent;
+    color: $white;
+    padding: 1rem;
+    cursor: pointer;
+    @include for-laptop {
+        display: none;
+    }
+}
+
+.btn-search {
+    @include for-tablet {
+        display: none;
+    }
+}
+
+.btn-close {
+    display: none;
+}
