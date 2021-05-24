@@ -1,0 +1,76 @@
+.community {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    @include for-laptop {
+        width: 80%;
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+    &__project-card {
+        width: 90%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+        color: $white;
+        margin-bottom: 32px;
+        @include for-laptop {
+            width: 48%;
+            margin-left: 15px;
+        }
+    }
+    &__info {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--title {
+            font-weight: 700;
+            font-size: $fsz-title;
+            padding: 1rem;
+        }
+        &--details {
+            font-size: $fsz-body;
+            opacity: 0.8;
+            padding: 1rem;
+        }
+        &--hidden-info {
+            display: none;
+        }
+        @include transition-ease;
+        &:hover &--hidden-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        &--reactions {
+            display: flex;
+        }
+        &--comments,
+        &--likes,
+        &--profile {
+            display: flex;
+            align-items: center;
+            @include transition-ease;
+            &:hover {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 16px;
+            }
+            &:active {
+                background: rgba(255, 255, 255, 0.16);
+                border-radius: 16px;
+            }
+        }
+        &--comments,
+        &--likes {
+            & i {
+                padding: 0 0 0 1rem;
+            }
+        }
+        &--profile img {
+            padding: 0 0 0 1rem;
+        }
+    }
+}

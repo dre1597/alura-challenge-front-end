@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo--container">
+            <img class="header__logo" src="./assets/img/Logo.svg" alt="">
+        </div>
+        <input class="search-bar" type="search" name="" id="" placeholder="Busque por algo">
+        <div class="header__buttons">
+            <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
+            <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
+            <button class="btn-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="header__profile">
+            <img class="header__profile--img" src="./assets/img/user.jpg" class="profile_img" alt=''>
+            <p class="header__profile--name">André</p>
+        </div>
+    </header>
+    <main class="main">
+        <aside class="menu">
+            <h3 class="title">menu</h3>
+            <a href="index.html" class="menu__item">
+                <div class="btn-code">
+                    <i class="fas fa-code"></i>
+                </div>
+                <p class="menu__item--name">Editor de Código</p>
+            </a>
+            <a href="users.html" class="menu__item active">
+                <div class="btn-users">
+                    <i class="fas fa-users"></i>
+                </div>
+                <p class="menu__item--name">Comunidade</p>
+            </a>
+        </aside>
+        <section class="community">
+            <article class="community__project-card">
+                <div class="community__code-editor">
+                    <div class="code-editor__container">
+                        <div class="code-editor__editor">
+                            <ul class="code-editor__mac-window">
+                                <li class="red-btn"></li>
+                                <li class="yellow-btn"></li>
+                                <li class="green-btn"></li>
+                            </ul>
+                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
+                                disabled>
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+        const go = (f, seed, acc) => {
+            const res = f(seed)
+            return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+    }
+}
+</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="community__info">
+                    <h3 class="community__info--title">Título do projeto</h3>
+                    <p class="community__info--details">Esta é a descrição do meu projeto</p>
+                    <div class="community__info--hidden-info">
+                        <div class="community__info--reactions">
+                            <div class="community__info--comments">
+                                <i class="fas fa-comment"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                            <div class="community__info--likes">
+                                <i class="fas fa-heart"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                        </div>
+                        <div class="community__info--profile">
+                            <img src="./assets/img/user2.png" alt="">
+                            <p class="community__info--details">@Harry</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="community__project-card">
+                <div class="community__code-editor">
+                    <div class="code-editor__container">
+                        <div class="code-editor__editor">
+                            <ul class="code-editor__mac-window">
+                                <li class="red-btn"></li>
+                                <li class="yellow-btn"></li>
+                                <li class="green-btn"></li>
+                            </ul>
+                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
+                                disabled>
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+        const go = (f, seed, acc) => {
+            const res = f(seed)
+            return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+    }
+}
+</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="community__info">
+                    <h3 class="community__info--title">Título do projeto</h3>
+                    <p class="community__info--details">Esta é a descrição do meu projeto</p>
+                    <div class="community__info--hidden-info">
+                        <div class="community__info--reactions">
+                            <div class="community__info--comments">
+                                <i class="fas fa-comment"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                            <div class="community__info--likes">
+                                <i class="fas fa-heart"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                        </div>
+                        <div class="community__info--profile">
+                            <img src="./assets/img/user2.png" alt="">
+                            <p class="community__info--details">@Harry</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="community__project-card">
+                <div class="community__code-editor">
+                    <div class="code-editor__container">
+                        <div class="code-editor__editor">
+                            <ul class="code-editor__mac-window">
+                                <li class="red-btn"></li>
+                                <li class="yellow-btn"></li>
+                                <li class="green-btn"></li>
+                            </ul>
+                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
+                                disabled>
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+        const go = (f, seed, acc) => {
+            const res = f(seed)
+            return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+    }
+}
+</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="community__info">
+                    <h3 class="community__info--title">Título do projeto</h3>
+                    <p class="community__info--details">Esta é a descrição do meu projeto</p>
+                    <div class="community__info--hidden-info">
+                        <div class="community__info--reactions">
+                            <div class="community__info--comments">
+                                <i class="fas fa-comment"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                            <div class="community__info--likes">
+                                <i class="fas fa-heart"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                        </div>
+                        <div class="community__info--profile">
+                            <img src="./assets/img/user2.png" alt="">
+                            <p class="community__info--details">@Harry</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="community__project-card">
+                <div class="community__code-editor">
+                    <div class="code-editor__container">
+                        <div class="code-editor__editor">
+                            <ul class="code-editor__mac-window">
+                                <li class="red-btn"></li>
+                                <li class="yellow-btn"></li>
+                                <li class="green-btn"></li>
+                            </ul>
+                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
+                                disabled>
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+        const go = (f, seed, acc) => {
+            const res = f(seed)
+            return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+    }
+}
+</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="community__info">
+                    <h3 class="community__info--title">Título do projeto</h3>
+                    <p class="community__info--details">Esta é a descrição do meu projeto</p>
+                    <div class="community__info--hidden-info">
+                        <div class="community__info--reactions">
+                            <div class="community__info--comments">
+                                <i class="fas fa-comment"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                            <div class="community__info--likes">
+                                <i class="fas fa-heart"></i>
+                                <p class="community__info--details">9</p>
+                            </div>
+                        </div>
+                        <div class="community__info--profile">
+                            <img src="./assets/img/user2.png" alt="">
+                            <p class="community__info--details">@Harry</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

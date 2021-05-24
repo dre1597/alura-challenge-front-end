@@ -83,8 +83,8 @@
     height: 56px;
     padding: 1rem;
     margin: 0 auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   .search-bar:hover {
     background-color: rgba(255, 255, 255, 0.24);
@@ -148,8 +148,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 14px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .menu__item:hover .btn-code,
@@ -174,8 +174,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 16px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-code i,
@@ -306,8 +306,8 @@
   width: 100%;
   margin: 30px auto;
   border: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .highlight_btn:hover {
@@ -383,8 +383,8 @@
   width: 100%;
   height: 56px;
   margin: 0 auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .customize__project-name:hover, .customize__description:hover, .customize__languages:hover {
@@ -396,8 +396,8 @@
 }
 
 .customize__languages {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -465,12 +465,128 @@
   border: transparent;
   font-size: 16px;
   color: #051d3b;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .customize-btn:hover {
   background: #7ba4fc;
+}
+
+.community {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .community {
+    width: 80%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 10px;
+  }
+}
+
+.community__project-card {
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .community__project-card {
+    width: 48%;
+    margin-left: 15px;
+  }
+}
+
+.community__info {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.community__info--title {
+  font-weight: 700;
+  font-size: 21px;
+  padding: 1rem;
+}
+
+.community__info--details {
+  font-size: 16px;
+  opacity: 0.8;
+  padding: 1rem;
+}
+
+.community__info--hidden-info {
+  display: none;
+}
+
+.community__info:hover .community__info--hidden-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.community__info--reactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.community__info--comments, .community__info--likes, .community__info--profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.community__info--comments:hover, .community__info--likes:hover, .community__info--profile:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.community__info--comments:active, .community__info--likes:active, .community__info--profile:active {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+}
+
+.community__info--comments i, .community__info--likes i {
+  padding: 0 0 0 1rem;
+}
+
+.community__info--profile img {
+  padding: 0 0 0 1rem;
 }
 
 * {

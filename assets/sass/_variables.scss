@@ -8,7 +8,7 @@ $field-color: rgba(255, 255, 255, 0.16);
 $field-color-hover: rgba(255, 255, 255, 0.24);
 $title-color: rgba(255, 255, 255, 0.7);
 
-$fsz-titles: 21px;
+$fsz-title: 21px;
 $fsz-body: 16px;
 $fsz-aside: 12px;
 
@@ -16,7 +16,7 @@ $ff-default: 'Inter', sans-serif;
 $ff-code: 'Roboto Mono', monospace;
 
 @mixin transition-ease {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease;
 }
 
 @mixin for-tablet {
