@@ -21,7 +21,7 @@ You can see more of the challenge right [here](https://www.alura.com.br/challeng
 
 ## Things to improve
 
-- I still have to finish the community page and some details from week 1
+- I still have to finish some details from week 1
 - Still have more 3 weeks to go!
 
 ## Setup
