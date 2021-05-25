@@ -3,6 +3,7 @@
     margin: 0 auto;
     margin-bottom: 40px;
     height: 600px;
+    padding: 1rem;
     @include for-laptop {
         width: 50%;
     }
