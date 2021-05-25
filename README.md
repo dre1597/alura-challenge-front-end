@@ -28,6 +28,7 @@ You can see more of the challenge right [here](https://www.alura.com.br/challeng
 -   Add menu for tablets and phones
 -   Add the highlight.js
 -   Add the functionality of save the cards (maybe on local storage)
+-   Improve the variable names and mixins
 
 ## Setup
 
