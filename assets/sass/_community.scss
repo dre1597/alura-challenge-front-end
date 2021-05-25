@@ -4,14 +4,14 @@
     width: 100%;
     padding: 1rem;
     @include for-laptop {
-        width: 80%;
+        width: 75%;
         flex-grow: 1;
-        margin: 0 10px;
+        margin-left: 10px;
     }
     &__project-card {
         width: 90%;
         margin: 0 auto;
-        background: rgba(0, 0, 0, 0.16);
+        background: $code-background;
         border-radius: 8px;
         color: $white;
         margin-bottom: 32px;
@@ -21,10 +21,8 @@
         }
     }
     &__info {
+        @include flex(flex-start, space-between, column);
         padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         &--title {
             font-weight: 700;
             font-size: $fsz-title;
@@ -40,9 +38,8 @@
         }
         @include transition-ease;
         &:hover &--hidden-info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            width: 100%;
+            @include flex(center, space-between, row);
             padding: 1rem;
         }
         &--reactions {
@@ -51,15 +48,10 @@
         &--comments,
         &--likes,
         &--profile {
-            display: flex;
-            align-items: center;
+            @include flex(center, flex-start, row);
             @include transition-ease;
             &:hover {
-                background: rgba(255, 255, 255, 0.08);
-                border-radius: 16px;
-            }
-            &:active {
-                background: rgba(255, 255, 255, 0.16);
+                background: $profile-hover;
                 border-radius: 16px;
             }
         }
@@ -67,6 +59,11 @@
         &--likes {
             & i {
                 padding: 0 0 0 1rem;
+            }
+            @include transition-ease;
+            &:active {
+                background: $field-color;
+                border-radius: 16px;
             }
         }
         &--profile img {

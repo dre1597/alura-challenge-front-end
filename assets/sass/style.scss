@@ -14,10 +14,12 @@ body {
     font-family: $ff-default;
 }
 
+textarea:focus-visible {
+    outline: none;
+}
 .main {
     @include for-laptop {
-        display: flex;
-        justify-content: space-between;
+        @include flex(flex-start, space-between, row);
         width: 90%;
         margin: 0 auto;
     }

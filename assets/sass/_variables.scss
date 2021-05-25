@@ -4,9 +4,21 @@ $light-blue: #7ba4fc;
 $lighter-blue: #96b9fd;
 $white: #fff;
 $dark-grey: #141414;
+$option: #2d415b;
+$code-background: rgba(0, 0, 0, 0.16);
+
 $field-color: rgba(255, 255, 255, 0.16);
 $field-color-hover: rgba(255, 255, 255, 0.24);
 $title-color: rgba(255, 255, 255, 0.7);
+
+$user-background: rgba(80, 129, 251, 0.16);
+$user-hover: rgba(80, 129, 251, 0.64);
+
+$button-background: rgba(80, 129, 251, 0.08);
+$button-active: rgba(80, 129, 251, 0.16);
+$button-border: 4px solid rgba(80, 129, 251, 0.72);
+$button-focus: rgba(80, 129, 251, 0.24);
+$profile-hover: rgba(255, 255, 255, 0.08);
 
 $fsz-title: 21px;
 $fsz-body: 16px;
@@ -15,8 +27,19 @@ $fsz-aside: 12px;
 $ff-default: 'Inter', sans-serif;
 $ff-code: 'Roboto Mono', monospace;
 
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
 @mixin transition-ease {
     transition: all 0.5s ease;
+}
+
+@mixin box-shadow-default {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
 }
 
 @mixin for-tablet {
@@ -35,4 +58,13 @@ $ff-code: 'Roboto Mono', monospace;
     @media screen and (min-width: 1440px) {
         @content;
     }
+}
+
+@mixin mac-button($color) {
+    height: 12px;
+    width: 12px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 5px;
+    background: $color;
 }

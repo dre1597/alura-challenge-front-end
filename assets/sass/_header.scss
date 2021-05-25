@@ -1,7 +1,5 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(center, space-between, row);
     text-align: center;
     width: 90%;
     margin: 0 auto;
@@ -9,34 +7,29 @@
     &__logo {
         width: 145px;
         padding: 1rem 0;
-        &--container {
-            @include for-laptop {
-                width: 20%;
-                text-align: left;
-            }
-        }
     }
     &__buttons {
-        display: flex;
-        justify-content: space-between;
+        @include flex(flex-start, space-between, row);
     }
     &__profile {
         display: none;
         @include for-laptop {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 20%;
+            @include flex(center, flex-end, row);
             padding: 1rem;
-            &--img {
-                width: 32px;
-                border-radius: 50%;
-                margin-right: 8px;
-            }
-            &--name {
-                color: $white;
-                font-size: 16px;
-            }
+            border-radius: 8px;
+        }
+        &--img {
+            width: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        &--name {
+            color: $white;
+            font-size: 16px;
+        }
+        @include transition-ease;
+        &:hover {
+            background: $profile-hover;
         }
     }
 }
@@ -55,13 +48,14 @@
         height: 56px;
         padding: 1rem;
         margin: 0 auto;
+        @include box-shadow-default;
         @include transition-ease;
         &:hover {
             background-color: $field-color-hover;
         }
     }
     @include for-laptop {
-        width: 50%;
+        width: 65%;
     }
 }
 
@@ -73,8 +67,16 @@
     color: $white;
     padding: 1rem;
     cursor: pointer;
+    border-radius: 16px;
     @include for-laptop {
         display: none;
+    }
+    @include transition-ease;
+    &:hover {
+        background: $button-background;
+    }
+    &:active {
+        background: $button-active;
     }
 }
 

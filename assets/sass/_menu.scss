@@ -3,33 +3,35 @@
     padding: 1rem 0;
     @include for-laptop {
         display: block;
-        width: 20%;
+        width: 15%;
         margin: 0;
     }
     &__item {
+        @include flex(center, flex-start, row);
         text-decoration: none;
         color: $title-color;
-        display: flex;
-        align-items: center;
         margin-bottom: 14px;
         @include transition-ease;
         &:hover .btn-code,
         &:hover .btn-users {
-            background: rgba(80, 129, 251, 0.64);
+            border-radius: 16px;
+            background: $user-hover;
+        }
+        &:active .btn-code,
+        &:active .btn-users {
+            background: $blue;
         }
     }
 }
 
 .btn-code,
 .btn-users {
+    @include flex(center, center, row);
     width: 48px;
     height: 48px;
     border-radius: 16px;
-    background-color: rgba(80, 129, 251, 0.16);
+    background-color: $user-background;
     color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-right: 16px;
     @include transition-ease;
     & i {
