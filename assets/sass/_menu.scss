@@ -1,10 +1,20 @@
 .menu {
-    display: none;
-    padding: 1rem 0;
+    position: fixed;
+    right: -100%;
+    top: 80px;
+    background-color: $menu-background;
+    border-radius: 8px;
+    padding: 2rem;
+    height: 500px;
+    @include transition-ease;
     @include for-laptop {
         display: block;
+        position: static;
         width: 15%;
         margin: 0;
+        border-radius: 0;
+        padding: 1rem 0;
+        background-color: transparent;
     }
     &__item {
         @include flex(center, flex-start, row);
@@ -20,6 +30,27 @@
         &:active .btn-code,
         &:active .btn-users {
             background: $blue;
+        }
+    }
+    &__profile {
+        @include flex(center, flex-start, row);
+        padding: 1rem;
+        border-radius: 8px;
+        @include for-laptop {
+            display: none;
+        }
+        &--img {
+            width: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        &--name {
+            color: $white;
+            font-size: 16px;
+        }
+        @include transition-ease;
+        &:hover {
+            background: $profile-hover;
         }
     }
 }
@@ -39,5 +70,13 @@
     }
     &:focus {
         background-color: $blue;
+    }
+}
+
+.horizontal-line {
+    border: 1px solid $white;
+    opacity: 0.08;
+    @include for-laptop {
+        display: none;
     }
 }

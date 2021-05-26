@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Dev</title>
+    <title>Alura Dev - Community</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="header__logo--container">
-            <img class="header__logo" src="./assets/img/Logo.svg" alt="">
+            <img class="header__logo" src="./assets/img/logo.svg" alt="">
         </div>
-        <input class="search-bar" type="search" name="" id="" placeholder="Busque por algo">
+        <input class="search-bar" type="search" placeholder="Busque por algo">
         <div class="header__buttons">
             <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
+            <button class="close-search hide"><i class="fas fa-times fa-2x"></i></button>
+            <button class="btn-close hide"><i class="fas fa-times fa-2x"></i></button>
             <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
-            <button class="btn-close"><i class="fas fa-times"></i></button>
         </div>
         <div class="header__profile">
-            <img class="header__profile--img" src="./assets/img/user.jpg" class="profile_img" alt=''>
+            <img class="header__profile--img" src="./assets/img/user.jpg">
             <p class="header__profile--name">André</p>
         </div>
     </header>
@@ -34,12 +35,17 @@
                 </div>
                 <p class="menu__item--name">Editor de Código</p>
             </a>
-            <a href="users.html" class="menu__item active">
+            <a href="community.html" class="menu__item active">
                 <div class="btn-users">
                     <i class="fas fa-users"></i>
                 </div>
                 <p class="menu__item--name">Comunidade</p>
             </a>
+            <div class="horizontal-line"></div>
+            <div class="menu__profile">
+                <img class="menu__profile--img" src="./assets/img/user.jpg" alt=''>
+                <p class="menu__profile--name">André</p>
+            </div>
         </aside>
         <section class="community">
             <article class="community__project-card">
@@ -237,6 +243,7 @@ const unfold = (f, seed) => {
         </section>
     </main>
     <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
+    <script src="./js/menu-buttons.js"></script>
 </body>
 
 </html>

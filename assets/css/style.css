@@ -1,3 +1,21 @@
+/* 
+*   Partials
+*/
+/*
+* Colors
+*/
+/*
+* Font Size
+*/
+/*
+* Font Family
+*/
+/*
+* Mixins
+*/
+/*
+* Media queries
+*/
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 .header {
@@ -83,22 +101,27 @@
 }
 
 .search-bar {
-  display: none;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 25%;
+  height: 56px;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border-radius: 8px;
+  border: transparent;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .search-bar {
     display: block;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.16);
-    color: #fff;
-    border-radius: 8px;
-    border: transparent;
-    font-size: 16px;
+    position: static;
     width: 450px;
-    height: 56px;
-    padding: 1rem;
-    margin: 0 auto;
     -webkit-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
             box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
     -webkit-transition: all 0.5s ease;
@@ -117,7 +140,8 @@
 
 .btn-search,
 .btn-toggle,
-.btn-close {
+.btn-close,
+.close-search {
   border: none;
   background-color: transparent;
   color: #fff;
@@ -131,20 +155,23 @@
 @media screen and (min-width: 1024px) {
   .btn-search,
   .btn-toggle,
-  .btn-close {
+  .btn-close,
+  .close-search {
     display: none;
   }
 }
 
 .btn-search:hover,
 .btn-toggle:hover,
-.btn-close:hover {
+.btn-close:hover,
+.close-search:hover {
   background: rgba(80, 129, 251, 0.08);
 }
 
 .btn-search:active,
 .btn-toggle:active,
-.btn-close:active {
+.btn-close:active,
+.close-search:active {
   background: rgba(80, 129, 251, 0.16);
 }
 
@@ -154,20 +181,31 @@
   }
 }
 
-.btn-close {
-  display: none;
+.search-show {
+  top: 20px;
 }
 
 .menu {
-  display: none;
-  padding: 1rem 0;
+  position: fixed;
+  right: -100%;
+  top: 80px;
+  background-color: #2d415b;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 500px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 1024px) {
   .menu {
     display: block;
+    position: static;
     width: 15%;
     margin: 0;
+    border-radius: 0;
+    padding: 1rem 0;
+    background-color: transparent;
   }
 }
 
@@ -203,6 +241,47 @@
   background: #5081fb;
 }
 
+.menu__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1rem;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__profile {
+    display: none;
+  }
+}
+
+.menu__profile--img {
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.menu__profile--name {
+  color: #fff;
+  font-size: 16px;
+}
+
+.menu__profile:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .btn-code,
 .btn-users {
   display: -webkit-box;
@@ -236,6 +315,17 @@
 .btn-code:focus,
 .btn-users:focus {
   background-color: #5081fb;
+}
+
+.horizontal-line {
+  border: 1px solid #fff;
+  opacity: 0.08;
+}
+
+@media screen and (min-width: 1024px) {
+  .horizontal-line {
+    display: none;
+  }
 }
 
 .code-editor {
@@ -454,8 +544,8 @@
   border: transparent;
   margin-bottom: 15px;
   font-size: 16px;
-  width: 100%;
   height: 56px;
+  width: 100%;
   margin: 0 auto;
   -webkit-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
@@ -469,6 +559,7 @@
 
 .customize__description {
   height: auto;
+  resize: none;
 }
 
 .customize__languages {
@@ -485,8 +576,8 @@
 
 @media screen and (min-width: 1024px) {
   .customize__languages {
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -520,8 +611,8 @@
 
 @media screen and (min-width: 1024px) {
   .customize__color {
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -567,6 +658,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -591,8 +683,8 @@
 
 @media screen and (min-width: 1024px) {
   .community__project-card {
-    width: 48%;
-    margin-left: 15px;
+    width: 47%;
+    margin-left: 20px;
   }
 }
 
@@ -696,6 +788,12 @@
   padding: 0 0 0 1rem;
 }
 
+/*
+* Fonts
+*/
+/*
+* Mini Reset
+*/
 * {
   padding: 0;
   margin: 0;
@@ -708,10 +806,16 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* 
+* Outline of textarea
+*/
 textarea:focus-visible {
   outline: none;
 }
 
+/*
+* Global Styles
+*/
 @media screen and (min-width: 1024px) {
   .main {
     display: -webkit-box;
@@ -747,5 +851,17 @@ textarea:focus-visible {
 
 .active p {
   color: #fff;
+}
+
+.show-menu {
+  right: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

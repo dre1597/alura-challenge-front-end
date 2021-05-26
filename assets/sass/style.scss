@@ -1,8 +1,17 @@
+/* 
+*   Partials
+*/
 @import 'variables', 'header', 'menu', 'code-editor', 'customize', 'community';
 
+/*
+* Fonts
+*/
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/*
+* Mini Reset
+*/
 * {
     padding: 0;
     margin: 0;
@@ -14,14 +23,20 @@ body {
     font-family: $ff-default;
 }
 
+/* 
+* Outline of textarea
+*/
 textarea:focus-visible {
     outline: none;
 }
+
+/*
+* Global Styles
+*/
 .main {
     @include for-laptop {
         @include flex(flex-start, space-between, row);
-        width: 90%;
-        margin: 0 auto;
+        @include center(90%);
     }
 }
 
@@ -41,4 +56,16 @@ textarea:focus-visible {
     & p {
         color: $white;
     }
+}
+
+.show-menu {
+    right: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.opacity {
+    opacity: 0;
 }

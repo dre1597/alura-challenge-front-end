@@ -1,7 +1,7 @@
 .community {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    @include center(100%);
     padding: 1rem;
     @include for-laptop {
         width: 75%;
@@ -9,15 +9,14 @@
         margin-left: 10px;
     }
     &__project-card {
-        width: 90%;
-        margin: 0 auto;
+        @include center(90%);
         background: $code-background;
         border-radius: 8px;
         color: $white;
         margin-bottom: 32px;
         @include for-laptop {
-            width: 48%;
-            margin-left: 15px;
+            width: 47%;
+            margin-left: 20px;
         }
     }
     &__info {

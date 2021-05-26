@@ -1,6 +1,5 @@
 .code-editor {
-    width: 90%;
-    margin: 0 auto;
+    @include center(90%);
     margin-bottom: 40px;
     height: 600px;
     padding: 1rem;

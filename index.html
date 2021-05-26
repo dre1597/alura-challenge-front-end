@@ -11,15 +11,16 @@
 
 <body>
     <header class="header">
-        <img class="header__logo" src="./assets/img/Logo.svg" alt="">
-        <input class="search-bar" type="search" name="" id="" placeholder="Busque por algo">
+        <img class="header__logo" src="./assets/img/logo.svg">
+        <input class="search-bar" type="search" placeholder="Busque por algo">
         <div class="header__buttons">
             <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
+            <button class="close-search hide"><i class="fas fa-times fa-2x"></i></button>
+            <button class="btn-close hide"><i class="fas fa-times fa-2x"></i></button>
             <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
-            <button class="btn-close"><i class="fas fa-times fa-2x"></i></button>
         </div>
         <div class="header__profile">
-            <img class="header__profile--img" src="./assets/img/user.jpg" class="profile_img" alt=''>
+            <img class="header__profile--img" src="./assets/img/user.jpg" alt=''>
             <p class="header__profile--name">André</p>
         </div>
     </header>
@@ -32,12 +33,17 @@
                 </div>
                 <p class="menu__item--name">Editor de Código</p>
             </a>
-            <a href="users.html" class="menu__item">
+            <a href="community.html" class="menu__item">
                 <div class="btn-users">
                     <i class="fas fa-users"></i>
                 </div>
                 <p class="menu__item--name">Comunidade</p>
             </a>
+            <div class="horizontal-line"></div>
+            <div class="menu__profile">
+                <img class="menu__profile--img" src="./assets/img/user.jpg" alt=''>
+                <p class="menu__profile--name">André</p>
+            </div>
         </aside>
         <section class="code-editor">
             <div class="code-editor__container">
@@ -62,7 +68,7 @@
             </fieldset>
             <h3 class="title">personalização</h3>
             <fieldset class="customize__fieldset-customize">
-                <select class="customize__languages" name="" id="">
+                <select class="customize__languages">
                     <option value="javascript">JavaScript</option>
                     <option value="java">Java</option>
                     <option value="python">Python</option>
@@ -74,6 +80,7 @@
     </main>
     <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
     <script src="./js/background-editor.js"></script>
+    <script src="./js/menu-buttons.js"></script>
 </body>
 
 </html>
