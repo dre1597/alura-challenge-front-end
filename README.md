@@ -19,12 +19,11 @@ You can see more of the challenge right [here](https://www.alura.com.br/challeng
 -   HTML
 -   SASS
 -   JavaScript
-<!-- -   highlight.js -->
+-   highlight.js
 
 ## Things to improve
 
 -   Finish some details on layout
--   Add the highlight.js
 -   Add the functionality of save the cards (maybe on local storage)
 -   Improve the variable names and mixins
 

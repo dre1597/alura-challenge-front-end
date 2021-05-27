@@ -189,7 +189,7 @@
   position: fixed;
   right: -100%;
   top: 80px;
-  background-color: #2d415b;
+  background-color: #2d425c;
   border-radius: 8px;
   padding: 2rem;
   height: 500px;
@@ -403,7 +403,7 @@
   height: 20px;
   width: 100%;
   list-style: none;
-  background-color: #141414;
+  background-color: #282a36;
 }
 
 .code-editor__text {
@@ -414,9 +414,16 @@
   padding: 1rem;
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
-  background-color: #141414;
+  background-color: #282a36;
   resize: none;
   border-radius: 0 0 8px 8px;
+}
+
+.code-editor__text .preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
 }
 
 .red-btn {
@@ -586,7 +593,7 @@
 }
 
 .customize__languages option {
-  background-color: #2d415b;
+  background-color: #2d425c;
 }
 
 .customize__color {
