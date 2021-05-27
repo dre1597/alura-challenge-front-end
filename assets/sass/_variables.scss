@@ -35,7 +35,7 @@ $fsz-aside: 12px;
 * Font Family
 */
 $ff-default: 'Inter', sans-serif;
-$ff-code: 'Roboto Mono', monospace;
+$ff-code: 'Fira Code', monospace;
 
 /*
 * Mixins
@@ -75,19 +75,19 @@ $ff-code: 'Roboto Mono', monospace;
 */
 
 @mixin for-tablet {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768.1px) {
         @content;
     }
 }
 
 @mixin for-laptop {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1024.1px) {
         @content;
     }
 }
 
 @mixin for-desktop {
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1440.1px) {
         @content;
     }
 }

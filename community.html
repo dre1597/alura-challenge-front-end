@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Dev - Community</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/themes/dracula.css">
 </head>
 
 <body>
@@ -57,21 +58,11 @@
                                 <li class="yellow-btn"></li>
                                 <li class="green-btn"></li>
                             </ul>
-                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
-                                disabled>
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-        const go = (f, seed, acc) => {
-            const res = f(seed)
-            return res ? go(f, res[1], acc.concat([res[0]])) : acc
-        }
-        return go(f, seed, [])
-    }
-}
-</textarea>
+                            <div class="code-editor__text">
+                                <!-- prettier-ignore -->
+                                <pre><code class="preview hljs python" spellcheck="false" aria-label="editor">print('Hello world')
+                                </code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,21 +96,15 @@ const unfold = (f, seed) => {
                                 <li class="yellow-btn"></li>
                                 <li class="green-btn"></li>
                             </ul>
-                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
-                                disabled>
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-        const go = (f, seed, acc) => {
-            const res = f(seed)
-            return res ? go(f, res[1], acc.concat([res[0]])) : acc
-        }
-        return go(f, seed, [])
+                            <div class="code-editor__text">
+                                <pre><code class="preview hljs java" spellcheck="false" contenteditable="true"
+                                    aria-label="editor">public class HelloWorld {
+    public static void main(String args[]) {
+        System.out.println("Hello World");
     }
 }
-</textarea>
+                                </code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,21 +138,15 @@ const unfold = (f, seed) => {
                                 <li class="yellow-btn"></li>
                                 <li class="green-btn"></li>
                             </ul>
-                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
-                                disabled>
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-        const go = (f, seed, acc) => {
-            const res = f(seed)
-            return res ? go(f, res[1], acc.concat([res[0]])) : acc
-        }
-        return go(f, seed, [])
-    }
-}
-</textarea>
+                            <div class="code-editor__text">
+                                <pre><code class="preview hljs" spellcheck="false" contenteditable="true"
+                                    aria-label="editor">class Hello
+    def hello
+        puts "Hello World"
+    end
+end
+                                </code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,21 +180,14 @@ const unfold = (f, seed) => {
                                 <li class="yellow-btn"></li>
                                 <li class="green-btn"></li>
                             </ul>
-                            <textarea class="code-editor__text" name="code" id="code" wrap="soft" cols="30" rows="16"
-                                disabled>
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-        const go = (f, seed, acc) => {
-            const res = f(seed)
-            return res ? go(f, res[1], acc.concat([res[0]])) : acc
-        }
-        return go(f, seed, [])
-    }
+                            <div class="code-editor__text">
+                                <pre><code class="preview hljs" spellcheck="false" contenteditable="true"
+                                    aria-label="editor">int main() {
+    printf("Hello World")
+    return 0;
 }
-</textarea>
+                                </code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,6 +216,15 @@ const unfold = (f, seed) => {
     </main>
     <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
     <script src="./assets/js/menu-buttons.js"></script>
+    <script src="./assets/js/highlight.pack.js"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                console.log(block);
+                hljs.highlightElement(block);
+            });
+        });
+    </script>
 </body>
 
 </html>

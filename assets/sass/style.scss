@@ -7,6 +7,7 @@
 * Fonts
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /*
@@ -68,4 +69,8 @@ textarea:focus-visible {
 
 .opacity {
     opacity: 0;
+}
+
+code {
+    font-family: $ff-code;
 }

@@ -10,7 +10,7 @@
         @include flex(center, center, column);
         background-color: #6bd1ff;
         width: 100%;
-        height: 80%;
+        height: 500px;
         border-radius: 8px;
         @include box-shadow-default;
     }
@@ -36,7 +36,6 @@
         border: none;
         color: $white;
         padding: 1rem;
-        font-family: $ff-code;
         font-size: 14px;
         background-color: $dark-grey;
         resize: none;
