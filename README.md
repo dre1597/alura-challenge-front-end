@@ -20,6 +20,7 @@ You can see more of the challenge right [here](https://www.alura.com.br/challeng
 -   SASS
 -   JavaScript
 -   highlight.js
+-   Web Storage
 
 ## Things to improve
 
