@@ -36,7 +36,7 @@ function createProject(project) {
                                 <li class="green-btn"></li>
                             </ul>
                             <div class="code-editor__text">
-                                <pre><code class="preview hljs python" spellcheck="false" aria-label="editor">
+                                <pre><code class="preview hljs ${project.details.language}" spellcheck="false" aria-label="editor">
                                 </code></pre>
                             </div>
                         </div>
