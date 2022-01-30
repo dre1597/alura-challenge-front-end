@@ -56,7 +56,7 @@
     }
     &--comments,
     &--likes {
-      & i {
+      & em {
         padding: 0 0 0 1rem;
       }
       @include transition-ease;

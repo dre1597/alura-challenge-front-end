@@ -65,7 +65,7 @@
   color: $white;
   margin-right: 16px;
   @include transition-ease;
-  & i {
+  & em {
     width: 20px;
   }
   &:focus {

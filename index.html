@@ -12,13 +12,13 @@
 
 <body>
   <header class="header">
-    <img class="header__logo" src="./assets/img/logo.svg">
+    <img class="header__logo" src="./assets/img/logo.svg" alt="logo">
     <input class="search-bar" type="search" placeholder="Busque por algo">
     <div class="header__buttons">
-      <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
-      <button class="close-search hide"><i class="fas fa-times fa-2x"></i></button>
-      <button class="btn-close hide"><i class="fas fa-times fa-2x"></i></button>
-      <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
+      <button class="btn-search"><em class="fas fa-search fa-2x"></em></button>
+      <button class="close-search hide"><em class="fas fa-times fa-2x"></em></button>
+      <button class="btn-close hide"><em class="fas fa-times fa-2x"></em></button>
+      <button class="btn-toggle"><em class="fas fa-bars fa-2x"></em></button>
     </div>
     <div class="header__profile">
       <img class="header__profile--img" src="./assets/img/user.png" alt=''>
@@ -30,13 +30,13 @@
       <h3 class="title">menu</h3>
       <a href="index.html" class="menu__item active">
         <div class="btn-code">
-          <i class="fas fa-code"></i>
+          <em class="fas fa-code"></em>
         </div>
         <p class="menu__item--name">Editor de Código</p>
       </a>
       <a href="community.html" class="menu__item">
         <div class="btn-users">
-          <i class="fas fa-users"></i>
+          <em class="fas fa-users"></em>
         </div>
         <p class="menu__item--name">Comunidade</p>
       </a>
@@ -65,12 +65,14 @@
     <form class="customize">
       <h3 class="title">seu projeto</h3>
       <fieldset class="customize__fieldset-details">
+        <legend></legend>
         <input class="customize__project-name" type="text" placeholder="Nome do seu projeto">
         <textarea class="customize__description" name="description" id="description" cols="30" rows="4" wrap="soft"
                   placeholder="Descrição do seu projeto"></textarea>
       </fieldset>
       <h3 class="title">personalização</h3>
       <fieldset class="customize__fieldset-customize">
+        <legend></legend>
         <select class="customize__languages">
           <option value="javascript">JavaScript</option>
           <option value="html">HTML</option>
