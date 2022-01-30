@@ -2,65 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Dev - Community</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/themes/dracula.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Dev - Community</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/themes/dracula.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__logo--container">
-            <img class="header__logo" src="./assets/img/logo.svg" alt="">
+  <header class="header">
+    <div class="header__logo--container">
+      <img class="header__logo" src="./assets/img/logo.svg" alt="">
+    </div>
+    <input class="search-bar" type="search" placeholder="Busque por algo">
+    <div class="header__buttons">
+      <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
+      <button class="close-search hide"><i class="fas fa-times fa-2x"></i></button>
+      <button class="btn-close hide"><i class="fas fa-times fa-2x"></i></button>
+      <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
+    </div>
+    <div class="header__profile">
+      <img class="header__profile--img" src="./assets/img/user.png">
+      <p class="header__profile--name">Harry</p>
+    </div>
+  </header>
+  <main class="main">
+    <aside class="menu">
+      <h3 class="title">menu</h3>
+      <a href="index.html" class="menu__item">
+        <div class="btn-code">
+          <i class="fas fa-code"></i>
         </div>
-        <input class="search-bar" type="search" placeholder="Busque por algo">
-        <div class="header__buttons">
-            <button class="btn-search"><i class="fas fa-search fa-2x"></i></button>
-            <button class="close-search hide"><i class="fas fa-times fa-2x"></i></button>
-            <button class="btn-close hide"><i class="fas fa-times fa-2x"></i></button>
-            <button class="btn-toggle"><i class="fas fa-bars fa-2x"></i></button>
+        <p class="menu__item--name">Editor de Código</p>
+      </a>
+      <a href="community.html" class="menu__item active">
+        <div class="btn-users">
+          <i class="fas fa-users"></i>
         </div>
-        <div class="header__profile">
-            <img class="header__profile--img" src="./assets/img/user.png">
-            <p class="header__profile--name">Harry</p>
-        </div>
-    </header>
-    <main class="main">
-        <aside class="menu">
-            <h3 class="title">menu</h3>
-            <a href="index.html" class="menu__item">
-                <div class="btn-code">
-                    <i class="fas fa-code"></i>
-                </div>
-                <p class="menu__item--name">Editor de Código</p>
-            </a>
-            <a href="community.html" class="menu__item active">
-                <div class="btn-users">
-                    <i class="fas fa-users"></i>
-                </div>
-                <p class="menu__item--name">Comunidade</p>
-            </a>
-            <div class="horizontal-line"></div>
-            <div class="menu__profile">
-                <img class="menu__profile--img" src="./assets/img/user.png" alt=''>
-                <p class="menu__profile--name">André</p>
-            </div>
-        </aside>
-        <section class="community">
-    </main>
-    <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/menu-buttons.js"></script>
-    <script src="./assets/js/community.js"></script>
-    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
-    <script defer>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('code').forEach((block) => {
-                hljs.highlightElement(block);
-            });
-        });
-    </script>
+        <p class="menu__item--name">Comunidade</p>
+      </a>
+      <div class="horizontal-line"></div>
+      <div class="menu__profile">
+        <img class="menu__profile--img" src="./assets/img/user.png" alt=''>
+        <p class="menu__profile--name">André</p>
+      </div>
+    </aside>
+    <section class="community">
+  </main>
+  <script src="https://kit.fontawesome.com/8db75cb122.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/menu-buttons.js"></script>
+  <script src="./assets/js/community.js"></script>
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('code').forEach((block) => {
+        hljs.highlightElement(block);
+      });
+    });
+  </script>
 </body>
 
 </html>

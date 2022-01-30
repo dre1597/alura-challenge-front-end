@@ -1,95 +1,95 @@
 .header {
-    @include flex(center, space-between, row);
-    text-align: center;
-    @include center(90%);
-    height: 100px;
-    &__logo {
-        width: 145px;
-        padding: 1rem 0;
+  @include flex(center, space-between, row);
+  text-align: center;
+  @include center(90%);
+  height: 100px;
+  &__logo {
+    width: 145px;
+    padding: 1rem 0;
+  }
+  &__buttons {
+    @include flex(flex-start, space-between, row);
+  }
+  &__profile {
+    display: none;
+    @include for-laptop {
+      @include flex(center, flex-end, row);
+      padding: 1rem;
+      border-radius: 8px;
     }
-    &__buttons {
-        @include flex(flex-start, space-between, row);
+    &--img {
+      width: 32px;
+      border-radius: 50%;
+      margin-right: 8px;
     }
-    &__profile {
-        display: none;
-        @include for-laptop {
-            @include flex(center, flex-end, row);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-        &--img {
-            width: 32px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-        &--name {
-            color: $white;
-            font-size: 16px;
-        }
-        @include transition-ease;
-        &:hover {
-            background: $profile-hover;
-        }
+    &--name {
+      color: $white;
+      font-size: 16px;
     }
+    @include transition-ease;
+    &:hover {
+      background: $profile-hover;
+    }
+  }
 }
 
 .search-bar {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    bottom: 0;
-    right: 25%;
-    height: 56px;
-    @include center(50vw);
-    padding: 1rem;
-    background-color: $field-color;
-    color: $white;
-    border-radius: 8px;
-    border: transparent;
-    font-size: 16px;
-    @include for-tablet {
-        display: block;
-        position: static;
-        width: 450px;
-        @include box-shadow-default;
-        @include transition-ease;
-        &:hover {
-            background-color: $field-color-hover;
-        }
+  position: absolute;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 25%;
+  height: 56px;
+  @include center(50vw);
+  padding: 1rem;
+  background-color: $field-color;
+  color: $white;
+  border-radius: 8px;
+  border: transparent;
+  font-size: 16px;
+  @include for-tablet {
+    display: block;
+    position: static;
+    width: 450px;
+    @include box-shadow-default;
+    @include transition-ease;
+    &:hover {
+      background-color: $field-color-hover;
     }
-    @include for-laptop {
-        width: 65%;
-    }
+  }
+  @include for-laptop {
+    width: 65%;
+  }
 }
 
 .btn-search,
 .btn-toggle,
 .btn-close,
 .close-search {
-    border: none;
-    background-color: transparent;
-    color: $white;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 16px;
-    @include for-laptop {
-        display: none;
-    }
-    @include transition-ease;
-    &:hover {
-        background: $button-background;
-    }
-    &:active {
-        background: $button-active;
-    }
+  border: none;
+  background-color: transparent;
+  color: $white;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 16px;
+  @include for-laptop {
+    display: none;
+  }
+  @include transition-ease;
+  &:hover {
+    background: $button-background;
+  }
+  &:active {
+    background: $button-active;
+  }
 }
 
 .btn-search {
-    @include for-tablet {
-        display: none;
-    }
+  @include for-tablet {
+    display: none;
+  }
 }
 
 .search-show {
-    top: 20px;
+  top: 20px;
 }

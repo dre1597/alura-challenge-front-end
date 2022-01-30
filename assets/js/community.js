@@ -1,31 +1,29 @@
 const communityContainer = document.querySelector('.community');
 
-new (function () {
-    showProjects();
+(function () {
+  showProjects();
 })();
 
 function showProjects() {
-    if (localStorage.length == 0) return;
+  if (localStorage.length == 0) return;
 
-    let projects = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        projects.push(JSON.parse(localStorage.getItem(i)));
-    }
-    projects.forEach((project) => {
-        communityContainer.innerHTML += createProject(project);
-        const codeArticle = communityContainer.querySelector(
-            `[data-id="${project.id}"]`
-        );
-        codeArticle.querySelector('code').innerText = project.details.code;
-        const codeContainer = codeArticle.querySelector(
-            '.code-editor__container'
-        );
-        codeContainer.style.backgroundColor = project.details.color;
-    });
+  let projects = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    projects.push(JSON.parse(localStorage.getItem(i)));
+  }
+  projects.forEach((project) => {
+    communityContainer.innerHTML += createProject(project);
+    const codeArticle = communityContainer.querySelector(
+      `[data-id="${project.id}"]`
+    );
+    codeArticle.querySelector('code').innerText = project.details.code;
+    const codeContainer = codeArticle.querySelector('.code-editor__container');
+    codeContainer.style.backgroundColor = project.details.color;
+  });
 }
 
 function createProject(project) {
-    let article = `
+  return `
         <article class="community__project-card" data-id="${project.id}">
                 <div class="community__code-editor">
                     <div class="code-editor__container">
@@ -63,5 +61,4 @@ function createProject(project) {
                     </div>
                 </div>
             </article>`;
-    return article;
 }

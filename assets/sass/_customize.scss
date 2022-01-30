@@ -1,113 +1,113 @@
 .customize {
-    @include center(90%);
-    padding: 1rem;
+  @include center(90%);
+  padding: 1rem;
+  @include for-laptop {
+    width: 25%;
+    margin: 0;
+  }
+  &__fieldset-details,
+  &__fieldset-customize {
+    @include flex(center, space-between, column);
+    margin-bottom: 30px;
+    border: none;
+  }
+  &__fieldset-details {
+    height: 180px;
+  }
+  &__fieldset-customize {
+    height: 120px;
+    @include for-tablet {
+      height: 70px;
+      flex-direction: row;
+    }
     @include for-laptop {
-        width: 25%;
-        margin: 0;
+      height: 120px;
+      flex-direction: column;
     }
-    &__fieldset-details,
-    &__fieldset-customize {
-        @include flex(center, space-between, column);
-        margin-bottom: 30px;
-        border: none;
-    }
-    &__fieldset-details {
-        height: 180px;
-    }
-    &__fieldset-customize {
-        height: 120px;
-        @include for-tablet {
-            height: 70px;
-            flex-direction: row;
-        }
-        @include for-laptop {
-            height: 120px;
-            flex-direction: column;
-        }
-    }
-    &__project-name,
-    &__description,
-    &__languages {
-        padding: 1rem;
-        background-color: $field-color;
-        color: $white;
-        border-radius: 8px;
-        border: transparent;
-        margin-bottom: 15px;
-        font-size: 16px;
-        height: 56px;
-        @include center(100%);
-        @include box-shadow-default;
-        @include transition-ease;
-        &:hover {
-            background: $field-color-hover;
-        }
-    }
-    &__description {
-        height: auto;
-        resize: none;
-    }
-    &__languages {
-        @include for-tablet {
-            margin: 0;
-            width: 49%;
-        }
-        @include for-laptop {
-            @include center(100%);
-        }
-        @include transition-ease;
-        &:hover {
-            background-color: $field-color-hover;
-        }
-        & option {
-            background-color: $menu-background;
-        }
-    }
-    &__color {
-        background-color: transparent;
-        width: 100%;
-        height: 56px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 0 auto;
-        border: transparent;
-        overflow: hidden;
-        @include box-shadow-default;
-        @include for-tablet {
-            margin: 0;
-            width: 49%;
-        }
-        @include for-laptop {
-            @include center(100%);
-        }
-    }
-}
-
-[type='color'] {
-    padding: 0;
-    border: transparent;
-    border-radius: 15px;
-}
-
-.customize-btn {
-    background-color: $blue;
+  }
+  &__project-name,
+  &__description,
+  &__languages {
+    padding: 1rem;
+    background-color: $field-color;
+    color: $white;
     border-radius: 8px;
+    border: transparent;
+    margin-bottom: 15px;
+    font-size: 16px;
     height: 56px;
     @include center(100%);
-    cursor: pointer;
-    border: transparent;
-    font-size: 16px;
-    color: $dark-blue;
     @include box-shadow-default;
     @include transition-ease;
     &:hover {
-        background: $light-blue;
+      background: $field-color-hover;
     }
-    &:active {
-        background: $light-blue;
-        border: $button-border;
+  }
+  &__description {
+    height: auto;
+    resize: none;
+  }
+  &__languages {
+    @include for-tablet {
+      margin: 0;
+      width: 49%;
     }
-    &:focus {
-        background: $lighter-blue;
+    @include for-laptop {
+      @include center(100%);
     }
+    @include transition-ease;
+    &:hover {
+      background-color: $field-color-hover;
+    }
+    & option {
+      background-color: $menu-background;
+    }
+  }
+  &__color {
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: transparent;
+    overflow: hidden;
+    @include box-shadow-default;
+    @include for-tablet {
+      margin: 0;
+      width: 49%;
+    }
+    @include for-laptop {
+      @include center(100%);
+    }
+  }
+}
+
+[type='color'] {
+  padding: 0;
+  border: transparent;
+  border-radius: 15px;
+}
+
+.customize-btn {
+  background-color: $blue;
+  border-radius: 8px;
+  height: 56px;
+  @include center(100%);
+  cursor: pointer;
+  border: transparent;
+  font-size: 16px;
+  color: $dark-blue;
+  @include box-shadow-default;
+  @include transition-ease;
+  &:hover {
+    background: $light-blue;
+  }
+  &:active {
+    background: $light-blue;
+    border: $button-border;
+  }
+  &:focus {
+    background: $lighter-blue;
+  }
 }

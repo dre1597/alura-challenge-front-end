@@ -16,17 +16,17 @@ You can see more of the challenge right [here](https://www.alura.com.br/challeng
 
 ## Technologies
 
--   HTML
--   SASS
--   JavaScript
--   highlight.js
--   Web Storage
+- HTML
+- SASS
+- JavaScript
+- highlight.js
+- Web Storage
 
 ## Things to improve
 
--   Finish some details on layout
--   Improve the variable names and mixins
--   Improve the save on local storage functionality
+- Finish some details on layout
+- Improve the variable names and mixins
+- Improve the save on local storage functionality
 
 ## Setup
 

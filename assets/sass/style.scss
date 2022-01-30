@@ -14,63 +14,63 @@
 * Mini Reset
 */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $dark-blue;
-    font-family: $ff-default;
+  background-color: $dark-blue;
+  font-family: $ff-default;
 }
 
 /* 
 * Outline of textarea
 */
 textarea:focus-visible {
-    outline: none;
+  outline: none;
 }
 
 /*
 * Global Styles
 */
 .main {
-    @include for-laptop {
-        @include flex(flex-start, space-between, row);
-        @include center(90%);
-    }
+  @include for-laptop {
+    @include flex(flex-start, space-between, row);
+    @include center(90%);
+  }
 }
 
 .title {
-    font-size: $fsz-aside;
-    color: $title-color;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    margin-bottom: 10px;
-    font-weight: 200;
+  font-size: $fsz-aside;
+  color: $title-color;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  margin-bottom: 10px;
+  font-weight: 200;
 }
 
 .active {
-    & div {
-        background-color: $blue;
-    }
-    & p {
-        color: $white;
-    }
+  & div {
+    background-color: $blue;
+  }
+  & p {
+    color: $white;
+  }
 }
 
 .show-menu {
-    right: 15px;
+  right: 15px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .opacity {
-    opacity: 0;
+  opacity: 0;
 }
 
 code {
-    font-family: $ff-code;
+  font-family: $ff-code;
 }

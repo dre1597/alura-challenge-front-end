@@ -1,86 +1,86 @@
 .code-editor {
-    @include center(90%);
-    margin-bottom: 40px;
-    height: 600px;
+  @include center(90%);
+  margin-bottom: 40px;
+  height: 600px;
+  padding: 1rem;
+  @include for-laptop {
+    width: 55%;
+  }
+  &__container {
+    @include flex(center, center, column);
+    background-color: #6bd1ff;
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    @include box-shadow-default;
+  }
+  &__editor {
+    @include flex(center, center, column);
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  &__mac-window {
+    @include flex(center, flex-start, row);
+    border-radius: 8px 8px 0 0;
     padding: 1rem;
-    @include for-laptop {
-        width: 55%;
+    height: 20px;
+    width: 100%;
+    list-style: none;
+    background-color: $dark-grey;
+  }
+  &__text {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: $white;
+    padding: 1rem;
+    font-size: 14px;
+    background-color: $dark-grey;
+    resize: none;
+    border-radius: 0 0 8px 8px;
+    & .preview {
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: none;
     }
-    &__container {
-        @include flex(center, center, column);
-        background-color: #6bd1ff;
-        width: 100%;
-        height: 500px;
-        border-radius: 8px;
-        @include box-shadow-default;
-    }
-    &__editor {
-        @include flex(center, center, column);
-        border-radius: 8px;
-        padding: 20px;
-        height: 100%;
-        width: 100%;
-    }
-    &__mac-window {
-        @include flex(center, flex-start, row);
-        border-radius: 8px 8px 0 0;
-        padding: 1rem;
-        height: 20px;
-        width: 100%;
-        list-style: none;
-        background-color: $dark-grey;
-    }
-    &__text {
-        width: 100%;
-        height: 100%;
-        border: none;
-        color: $white;
-        padding: 1rem;
-        font-size: 14px;
-        background-color: $dark-grey;
-        resize: none;
-        border-radius: 0 0 8px 8px;
-        & .preview {
-            display: block;
-            width: 100%;
-            height: 100%;
-            outline: none;
-        }
-    }
+  }
 }
 
 .red-btn {
-    @include mac-button(#ff5f56);
+  @include mac-button(#ff5f56);
 }
 .yellow-btn {
-    @include mac-button(#ffbd2e);
+  @include mac-button(#ffbd2e);
 }
 .green-btn {
-    @include mac-button(#27c93f);
-    margin-right: 0;
+  @include mac-button(#27c93f);
+  margin-right: 0;
 }
 
 .highlight_btn {
-    font-family: $ff-default;
-    background-color: $button-background;
-    border-radius: 8px;
-    padding: 1rem;
-    font-size: 16px;
-    cursor: pointer;
-    color: $white;
-    width: 100%;
-    margin: 30px auto;
-    border: none;
-    @include box-shadow-default;
-    @include transition-ease;
-    &:hover {
-        background: $button-active;
-    }
-    &:active {
-        background: $button-active;
-        border: 4px solid $button-focus;
-    }
-    &:focus {
-        background: $button-focus;
-    }
+  font-family: $ff-default;
+  background-color: $button-background;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: $white;
+  width: 100%;
+  margin: 30px auto;
+  border: none;
+  @include box-shadow-default;
+  @include transition-ease;
+  &:hover {
+    background: $button-active;
+  }
+  &:active {
+    background: $button-active;
+    border: 4px solid $button-focus;
+  }
+  &:focus {
+    background: $button-focus;
+  }
 }

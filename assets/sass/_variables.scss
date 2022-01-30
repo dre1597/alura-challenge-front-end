@@ -42,32 +42,32 @@ $ff-code: 'Fira Code', monospace;
 */
 
 @mixin center($width) {
-    width: $width;
-    margin: 0 auto;
+  width: $width;
+  margin: 0 auto;
 }
 
 @mixin flex($align, $justify, $direction) {
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
 }
 
 @mixin transition-ease {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @mixin box-shadow-default {
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
 }
 
 @mixin mac-button($color) {
-    height: 12px;
-    width: 12px;
-    border: none;
-    border-radius: 50px;
-    margin-right: 5px;
-    background: $color;
+  height: 12px;
+  width: 12px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 5px;
+  background: $color;
 }
 
 /*
@@ -75,19 +75,19 @@ $ff-code: 'Fira Code', monospace;
 */
 
 @mixin for-tablet {
-    @media screen and (min-width: 768.1px) {
-        @content;
-    }
+  @media screen and (min-width: 768.1px) {
+    @content;
+  }
 }
 
 @mixin for-laptop {
-    @media screen and (min-width: 1024.1px) {
-        @content;
-    }
+  @media screen and (min-width: 1024.1px) {
+    @content;
+  }
 }
 
 @mixin for-desktop {
-    @media screen and (min-width: 1440.1px) {
-        @content;
-    }
+  @media screen and (min-width: 1440.1px) {
+    @content;
+  }
 }
